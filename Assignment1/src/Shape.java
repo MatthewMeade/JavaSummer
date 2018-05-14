@@ -1,12 +1,19 @@
 /**
- * Created by 20136520 on 5/9/2018.
+ * Abstract class representing a shape
  */
 public abstract class Shape {
-    private String description;
 
+    /**
+     * Returns the area of the shape
+     *
+     * @return double area of the shape
+     */
     public abstract double area();
 
+    /**
+     * Returns the description of the shape
+     *
+     * @return String description of the shape
+     */
     public abstract String getDescription();
-
-    public abstract void setDescription(String description);
 }

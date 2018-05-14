@@ -1,44 +1,54 @@
 /**
- * Created by 20136520 on 5/9/2018.
+ * Class representing a circle, extending Shape
  */
-public class Circle extends Shape{
+public class Circle extends Shape {
     private double radius;
 
     /**
-     * Constructor to create a circle
-     * TODO handle negative
-     * @param radius
+     * Circle Constructor
+     *
+     * @param radius double Radius of the circle
      */
     public Circle(double radius) {
-        this.radius = radius;
+        this.radius = radius > 0 ? radius : 0;
     }
 
     /**
-     * Radius Getter
-     * @return
+     * Returns the radius of the circle
+     *
+     * @return double radius of the circle
      */
     public double getRadius() {
         return radius;
     }
 
     /**
-     * Radius Setter
-     * @return
+     * Sets the radius of the circle
+     *
+     * @param radius double Radius of the circle
      */
     public void setRadius(double radius) {
         this.radius = radius;
     }
 
-    public double area(){
+    /**
+     * Returns the circle's area
+     *
+     * @return double Area of circle
+     */
+    @Override
+    public double area() {
         return Math.PI * Math.pow(this.radius, 2);
     }
 
-    public void setDescription(String description) {
-
-    }
-
-    public String getDescription(){
-        return "Circle with radius of " + this.getRadius();
+    /**
+     * Returns the description of the circle
+     *
+     * @return String description of the circle
+     */
+    @Override
+    public String getDescription() {
+        return String.format("Circle with a radius of %.2f and an area of %.2f", this.getRadius(), this.area());
     }
 
 }
