@@ -6,8 +6,8 @@ import java.util.Random;
 public class ShapeGenerator{
 
     private static final int MAX_RADIUS = 25;
-    private static final int MAX_WIDTH = 25;
-    private static final int MAX_LENGTH = 25;
+    private static final int MAX_WIDTH = 50;
+    private static final int MAX_LENGTH = 50;
 
     /**
      * Generate a random shape of a random size

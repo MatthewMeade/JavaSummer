@@ -28,7 +28,7 @@ public class Circle extends Shape {
      * @param radius double Radius of the circle
      */
     public void setRadius(double radius) {
-        this.radius = radius;
+        this.radius = radius > 0 ? radius : 0;
     }
 
     /**

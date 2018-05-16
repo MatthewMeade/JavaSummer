@@ -12,8 +12,8 @@ public class Rectangle extends Shape {
      * @param width  Width of rectangle
      */
     public Rectangle(double length, double width) {
-        this.length = length;
-        this.width = width;
+        this.length = length > 0 ? length : 0;
+        this.width = width > 0 ? width : 0;
     }
 
     /**
@@ -31,7 +31,7 @@ public class Rectangle extends Shape {
      * @param length Length of the rectangle
      */
     public void setLength(double length) {
-        this.length = length;
+        this.length = length > 0 ? length : 0;
     }
 
     /**
@@ -49,7 +49,7 @@ public class Rectangle extends Shape {
      * @param width double width of the rectangle
      */
     public void setWidth(double width) {
-        this.width = width;
+        this.width = width > 0 ? width : 0;
     }
 
     /**
