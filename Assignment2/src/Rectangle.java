@@ -11,9 +11,13 @@ public class Rectangle extends Shape {
      * @param length Length of rectangle
      * @param width  Width of rectangle
      */
-    public Rectangle(double length, double width) {
-        this.length = length > 0 ? length : 0;
-        this.width = width > 0 ? width : 0;
+    public Rectangle(double length, double width) throws InvalidShapeParameterException{
+
+        if (length < 0 || width < 0){
+            throw new InvalidShapeParameterException("Invalid rectangle parameter");
+        }
+        this.length = length;
+        this.width = width;
     }
 
     /**
@@ -30,8 +34,11 @@ public class Rectangle extends Shape {
      *
      * @param length Length of the rectangle
      */
-    public void setLength(double length) {
-        this.length = length > 0 ? length : 0;
+    public void setLength(double length) throws InvalidShapeParameterException{
+        if (length < 0){
+            throw new InvalidShapeParameterException("Invalid Rectangle Length");
+        }
+        this.length = length;
     }
 
     /**
@@ -48,8 +55,10 @@ public class Rectangle extends Shape {
      *
      * @param width double width of the rectangle
      */
-    public void setWidth(double width) {
-        this.width = width > 0 ? width : 0;
+    public void setWidth(double width) throws InvalidShapeParameterException{
+        if (width < 0) {
+            throw new InvalidShapeParameterException("Invalid Rectangle Width");
+        }
     }
 
     /**
