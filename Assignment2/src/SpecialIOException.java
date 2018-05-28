@@ -1,13 +1,13 @@
 import java.io.IOException;
 
-public class SpecialIOException extends IOException{
-   public SpecialIOException(){
-      super( "Special IO Exception Occurred" );
-   }
+public class SpecialIOException extends IOException {
+    public SpecialIOException() {
+        super("Special IO Exception Occurred");
+    }
 
-   public SpecialIOException( String message ){
-      super( message );
-   }
+    public SpecialIOException(String message) {
+        super(message);
+    }
 }  // end class SpecialIOException
 
 /**************************************************************************
