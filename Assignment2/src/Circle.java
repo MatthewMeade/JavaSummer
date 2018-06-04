@@ -10,10 +10,7 @@ public class Circle extends Shape {
      * @param radius double Radius of the circle
      */
     public Circle(double radius) throws  InvalidShapeParameterException{
-        if (radius < 0) {
-            throw new InvalidShapeParameterException("Circle radius cannot be negative");
-        }
-        this.radius = radius;
+        setRadius(radius);
     }
 
     /**

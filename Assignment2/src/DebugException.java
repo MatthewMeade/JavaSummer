@@ -7,11 +7,11 @@ public class DebugException {
         try {
             throw new SpecialIOException();
         } catch (SpecialIOException specialIOException) {
-            System.err.println(specialIOException.toString());
+            System.err.println(specialIOException.getMessage());
         } catch (IOException ioException) {
-            System.err.println(ioException.toString());
+            System.err.println(ioException.getMessage());
         } catch (Exception exception) {
-            System.err.println(exception.toString());
+            System.err.println(exception.getMessage());
         }
     }  // end method main
 }  // end class DebugException

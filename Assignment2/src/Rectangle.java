@@ -12,12 +12,8 @@ public class Rectangle extends Shape {
      * @param width  Width of rectangle
      */
     public Rectangle(double length, double width) throws InvalidShapeParameterException{
-
-        if (length < 0 || width < 0){
-            throw new InvalidShapeParameterException("Invalid rectangle parameter");
-        }
-        this.length = length;
-        this.width = width;
+        setLength(length);
+        setWidth(width);
     }
 
     /**

@@ -16,16 +16,21 @@ public class ShapeGenerator {
      * @return Shape random shape
      */
     public static Shape GenerateShape() {
-        try {
-            if (new Random().nextBoolean()) {
-                return new Circle(GenerateNumber(MAX_RADIUS));
-            } else {
-                return new Rectangle(GenerateNumber(MAX_LENGTH), GenerateNumber(MAX_WIDTH));
+
+        Shape shape = null;
+        do {
+            try {
+                if (new Random().nextBoolean()) {
+                    shape = new Circle(GenerateNumber(MAX_RADIUS));
+                } else {
+                    shape = new Rectangle(GenerateNumber(MAX_LENGTH), GenerateNumber(MAX_WIDTH));
+                }
+            } catch (InvalidShapeParameterException e) {
+                System.out.println("Exception thrown when generating shape: (" + e.getMessage() + ") Retying shape generation");
             }
-        } catch (InvalidShapeParameterException e) {
-            System.out.println("Exception thrown when generating shape: (" + e.getMessage() + ") Retying shape generation");
-            return GenerateShape();
-        }
+        } while (shape == null);
+
+        return shape;
     }
 
     /**
